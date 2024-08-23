@@ -1,3 +1,5 @@
+//-------------------------------JavaScript Fundamentals – Part 1-------------------------------
+
 // ------Bai 1-------------------
 
 // // Data 1
@@ -114,6 +116,7 @@
 
 // ------------Bai 4---------------
 //  Dùng toán tử 3 ngôi
+
 // function calculateTip(bill) {
 //     return (bill >= 50 && bill <= 300) ? bill * 0.15 : bill * 0.2;
 // }
