@@ -114,22 +114,25 @@
 
 // ------------Bai 4---------------
 //  Dùng toán tử 3 ngôi
-function calculateTip(bill) {
-    return (bill >= 50 && bill <= 300) ? bill * 0.15 : bill * 0.2;
-}
-
-function print(bill) {
-    console.log(`Tiền hóa đơn là: ${bill}, 
-        Tiền tip là: ${calculateTip(bill)},
-        Tổng tiền là: ${bill + calculateTip(bill)}`);
-}
-
-// function print(bill) {
-//     console.log("Tiền hóa đơn là: " + bill + ", " +
-//         "Tiền tip là: " + calculateTip(bill) + ", " +
-//         "Tổng tiền là: " + (bill + calculateTip(bill)));
+// function calculateTip(bill) {
+//     return (bill >= 50 && bill <= 300) ? bill * 0.15 : bill * 0.2;
 // }
 
-print(275);
-print(40);
-print(430);
+// function print(bill) {
+//     console.log(`Tiền hóa đơn là: ${bill}, 
+//         Tiền tip là: ${calculateTip(bill)},
+//         Tổng tiền là: ${bill + calculateTip(bill)}`);
+// }
+
+// // function print(bill) {
+// //     console.log("Tiền hóa đơn là: " + bill + ", " +
+// //         "Tiền tip là: " + calculateTip(bill) + ", " +
+// //         "Tổng tiền là: " + (bill + calculateTip(bill)));
+// // }
+
+// print(275);
+// print(40);
+// print(430);
+
+
+
