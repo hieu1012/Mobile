@@ -1,6 +1,7 @@
 //-------------------------------JavaScript Fundamentals – Part 2-------------------------------
 
 // ------------Bai 1---------------
+
 // Tạo arrow function 'calcAverage' để tính trung bình của 3 điểm số
 // let calcAverage = (scores) =>{
 //     let sum = scores.reduce((a, b) => a + b, 0);
@@ -64,42 +65,72 @@
 
 
 // ------------Bai 3---------------
-// Tạo đối tượng cho Mark và John
-const mark = {
-    fullName: 'Mark Miller',
-    mass: 78,
-    height: 1.69,
-    calcBMI: function() {
-        this.bmi = this.mass / (this.height ** 2);// Lũy thừa 2, lũy thừa 3 là height **3
-        return this.bmi;
-    }
-};
 
-const john = {
-    fullName: 'John Smith',
-    mass: 92,
-    height: 1.95,
-    calcBMI: function() {
-        this.bmi = this.mass / (this.height ** 2);
-        return this.bmi;
-    }
-};
-// Tính toán BMI cho cả hai
-console.log(mark.bmi); //=> undefined
+// const mark = {
+//     fullName: 'Mark Miller',
+//     mass: 78,
+//     height: 1.69,
+//     calcBMI: function() {
+//         this.bmi = this.mass / (this.height ** 2);// Lũy thừa 2, lũy thừa 3 là height **3
+//         return this.bmi;
+//     }
+// };
 
-mark.calcBMI();
-console.log(mark.bmi.toFixed(2)); //=> 27.30
-john.calcBMI();
+// const john = {
+//     fullName: 'John Smith',
+//     mass: 92,
+//     height: 1.95,
+//     calcBMI: function() {
+//         this.bmi = this.mass / (this.height ** 2);
+//         return this.bmi;
+//     }
+// };
+// // Tính toán BMI cho cả hai
+// console.log(mark.bmi); //=> undefined
 
-if (mark.bmi > john.bmi) {
-    // console.log(`${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}'s (${john.bmi})!`);
-    console.log('Mark\'s BMI (' +mark.bmi.toFixed(2)+')  is higher than John\'s ('+john.bmi.toFixed(2)+')!');
-} else if (john.bmi > mark.bmi) {
-    console.log('Jonh\'s BMI (' +john.bmi.toFixed(2)+')  is higher than Mark\'s ('+mark.bmi.toFixed(2)+')!');
-} else {
-    console.log(`${mark.fullName} and ${john.fullName} have the same BMI (${mark.bmi})!`);
+// mark.calcBMI();
+// console.log(mark.bmi.toFixed(2)); //=> 27.30
+// john.calcBMI();
+
+// if (mark.bmi > john.bmi) {
+//     // console.log(`${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}'s (${john.bmi})!`);
+//     console.log('Mark\'s BMI (' +mark.bmi.toFixed(2)+')  is higher than John\'s ('+john.bmi.toFixed(2)+')!');
+// } else if (john.bmi > mark.bmi) {
+//     console.log('Jonh\'s BMI (' +john.bmi.toFixed(2)+')  is higher than Mark\'s ('+mark.bmi.toFixed(2)+')!');
+// } else {
+//     console.log(`${mark.fullName} and ${john.fullName} have the same BMI (${mark.bmi})!`);
+// }
+
+// ------------Bai 4---------------
+
+function calcTip(bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20;
+}
+// Tạo mảng 'bills' 10 phần tử
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+
+// Tạo 2 mảng 'tips' và 'totals'
+const tips = [];
+const totals = [];
+
+// Tính toán tips và totals và thêm values vào mảng tương ứng
+for (let i = 0; i < bills.length; i++) {
+    tips.push(calcTip(bills[i]));
+    totals.push(bills[i] + tips[i]);
 }
 
+// 4. Bonus: Write a function 'calcAverage' which takes an array called 'arr' as an argument
+function calcAverage(totals) {
+    // let sum = 0;
+    // for (let i = 0; i < totals.length; i++) {
+    //     sum += totals[i];
+    // }
+    // return sum / totals.length;
+    return totals.reduce((a, b) => a + b, 0) / totals.length;
+}
+
+// 4.3. Call the function with the 'totals' array
+console.log(calcAverage(totals));
 
 
 
