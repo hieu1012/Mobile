@@ -39,22 +39,22 @@
 //   }
 // // Kiểm tra hàm với bill = 100  
 //   console.log(calcTip(100));
-  
+
 //   //Tạo mảng 'bills'
 //   const bills = [125, 555, 44];
-  
+
 // // Tạo mảng 'tips'
 // //   const tips = bills.map(calcTip);
 // let tips = [];
 // for (let i = 0; i < bills.length; i++) {
 //     tips.push(calcTip(bills[i]));
 // }
-  
+
 // // Tạo mảng 'total'
 // const total = bills.map((bill, index) => {
 //     return  bill + tips[index]
 // });
- 
+
 // // let total = [];
 // // for (let i = 0; i < bills.length; i++) {
 // //     total.push(bills[i] + tips[i]);
